@@ -1,0 +1,150 @@
+:root{
+    /*colors simple*/
+    --c1:#ff9df0;
+    --c2:#eb9ced;
+    --c3:#ca9ae4;
+    --c4:#9992e0;
+    --c5:#5768d2;
+    --c6:#014c8f;
+    /*colors gradient*/
+    --cg1:linear-gradient(90deg,#ff9df0,#eb9ced);
+    --cg2:linear-gradient(-45deg,#9992e0,#014c8f);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color:var(--c1); 
+    font-family:fantasy;
+}
+header{
+background: var(--cg1);
+position:fixed;
+width:100%;
+height:80px;
+color:var(--c6);
+align-items:center;
+display:flex;
+justify-content:space-between;
+font-family:Cambria, Cochin;
+padding:10px;
+z-index:8;
+}
+header h1{
+    -webkit-text-stroke:1px var(--c5);
+    color:transparent;
+    text-shadow: -4px -18px var(--c4) , 4px 18px var(--c4);
+}
+header nav{
+    display:flex;
+    
+}
+header>nav> a{
+color:var(--c5);
+text-decoration: none;
+font-size: larger;
+margin:0 5px;
+
+}
+header>nav>a:hover{
+    background-color: white;
+    letter-spacing: 4px;
+}
+main{
+    position:relative;
+    top:90px;
+
+}
+#welcome-section{
+    width:100%;
+    height:620px;
+    background:var(--cg2);
+    position: relative;
+    font-size: 1.5rem;
+    padding:20% 19% ;
+    color: white;
+    -webkit-text-stroke:1px black;
+    text-align: center;
+}
+#projects{
+    background-color: var(--c3);
+    height: max-content ;
+}
+#projects div{
+ display: flex;
+flex-wrap: wrap;
+
+}
+#projects>div> .project-tile{
+    width:300px;
+    height:300px;
+    margin:10px;
+     background: rgba(255, 255, 255, 0.397);
+     border-radius: 30px;
+     padding: 1%;
+
+}
+#projects> h1{
+    color: white;
+    -webkit-text-stroke:1px black;
+     text-align: center; 
+}
+#projects>div> .project-tile>img{
+    width:100%;
+    height:60%;
+    border-radius: 30px;
+}
+#projects>div> .project-tile>a{
+       font-size: 30px;
+       color: var(--c6);
+      margin:10px auto ;
+      text-decoration: none;
+}
+#projects>div> .project-tile>a:hover{
+    background-color: var(--c1);
+    color:white;
+    
+}
+#projects > a{
+    border: 7px double white;
+    color:var(--c6);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 25px;
+    margin:20px;
+    padding:5px;
+    text-wrap: nowrap;
+    display:block;
+    text-align: center;
+}
+#projects > a:hover{
+    letter-spacing: 4px;
+    color:white;
+    background-color: var(--c6);
+}
+footer{
+background: var(--cg2);
+text-align: center;
+line-height: 50px;
+padding:20%;
+font-size: 2rem;
+color: #ca9ae4;
+
+}
+footer a{
+color: white;
+
+}
+footer a:hover{
+    color:black;
+    font-size: larger;
+}
+@media (max-width:600px) {
+    *,div,a{
+        font-size: 90%;
+        overflow-x: hidden;
+    }
+}
